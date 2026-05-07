@@ -24,7 +24,7 @@ LONUX BASICS
 .figlet = fonts
 .ncal=calender
 .date = date
-expr = evaluate expression
+.expr = evaluate expression
 
 WHAT I UNDERSTOOD
 • Linux commands through practice
