@@ -1,19 +1,10 @@
 •Navigation Commands • pwd = show current directory • ls = list files and folders • cd = move between directories
-
 •Getting Help • man ls = manual page for ls • ls --help = quick help menu
-
 •File and Directory Management • touch = create file • mkdir = create directory • cp = copy files and folders • mv = move or rename files • rm = remove files
-
 •Hidden Files • ls -a = show hidden files
-
 •Wildcards • * = match multiple files
-
 •SSH • SSH allows remote connection to Linux servers
-
 •File Information • file filename = determine file type
-
 •What I understood well • Navigation • File management • SSH basics
-
 •What was difficult • Merging files • Some navigation confusion at first
-
 •Progress • Completed 4 out of 8 topics in Linux Fundamentals 2
