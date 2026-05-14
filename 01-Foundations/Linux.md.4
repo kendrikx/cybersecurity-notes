@@ -1,0 +1,62 @@
+# Linux Users, Groups and Permissions - My Learning Notes
+
+## Commands Learned
+- `sudo` — Run commands with elevated (superuser) privileges
+- `su` — Switch to another user account
+- `chmod` — Modify file and directory permissions
+- `chown` — Change file and directory ownership
+
+---
+
+## Users and Groups
+- Created new user accounts
+- Understood primary and secondary groups
+- Explored user information (`id`, `/etc/passwd`, `/etc/group`)
+- Created new groups
+- Added and removed users from groups
+
+---
+
+## Sudo Privileges
+**Why sudo access is important:**
+- Enhances security by limiting root usage
+- Provides accountability through logging
+- Allows controlled and temporary elevated access
+- Prevents accidental system-wide damage from constant root login
+
+---
+
+## File Permissions
+
+### Common Permission Examples
+- **777** — Everyone has full read, write, and execute access (not recommended for production)
+- **755** — Owner has full access, group and others can read and execute
+- **644** — Owner can read and write, group and others can only read
+- **600** — Owner has full read/write access, completely private
+
+### Key Concepts
+- **File Ownership**: Controlled using `chown` (change owner and group)
+- **Permission Modification**: Controlled using `chmod` (symbolic or numeric mode)
+
+---
+
+## Summary of Understanding
+
+### What I Understood Well
+- Users and groups management
+- Basic `sudo` usage and best practices
+- File permissions concept (rwx)
+- Ownership concepts (`chown`)
+
+### What Needs More Practice
+- Advanced `chmod` usage (symbolic and numeric)
+- Complex group management scenarios
+- Understanding special permissions (SUID, SGID, Sticky Bit)
+- Permission combinations and real-world application
+
+---
+
+**Progress**: Completed multiple Linux administration labs on LabEx  
+**Skill Progress**: 28/118  
+
+---
