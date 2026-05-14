@@ -25,12 +25,22 @@ Documenting my journey from cybersecurity beginner to professional SOC analyst t
 - [ ] SOC Level 1
 - [ ] SIEM Home Lab
 
-## 🟥 Phase 4. Advanced Security
+## 🟦Phase 4. Advanced Security
 - [ ] CySA+
 - [ ] SOC Level 2
+- [ ] Advanced EndpointInvestigation
+
+## 🟥Phase 5.Offensive Security
+- [ ] Jr Penetration Tester
+- [ ] Web App Pentesting
+- [ ] Web Application Red Teaming
 - [ ] Red Teaming
+
+## 🟨Phase 6.Enterprise Cloud Defense
 - [ ] AWS Security
+- [ ] Azure Defense
 - [ ] DevSecOps
+- [ ] AI Security
 
 ---
 
@@ -86,4 +96,4 @@ Documenting my journey from cybersecurity beginner to professional SOC analyst t
 
 # 🎯 Long-Term Goal
 
-Build strong blue team, SOC, Linux, networking, and offensive security skills to work in international remote cybersecurity roles.
+Build strong blue team, SOC, Linux, networking, and strong offensive security skills to work in international remote cybersecurity roles.
