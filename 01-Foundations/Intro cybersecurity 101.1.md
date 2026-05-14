@@ -9,7 +9,7 @@
 
 ---
 
-## Security Approaches
+## Security Approaches 
 
 ### Offensive Security (Red Teaming)
 - Also known as **Red Teaming**.
