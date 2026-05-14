@@ -65,6 +65,3 @@
 - **Skill Progress**: 28/118
 
 ---
-
-**Last Updated**: May 14, 2026  
-**Status**: In Progress
