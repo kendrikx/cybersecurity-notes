@@ -1,7 +1,7 @@
 # 🔒 Cybersecurity Learning Journey & Portfolio
 
 ## 🚀 Goal
-Documenting my journey from cybersecurity beginner to professional SOC analyst through hands-on labs, Linux administration, networking, scripting, and security operations.
+Documenting my journey from cybersecurity beginner to professional SOC analyst and Offensive Specialist through hands-on labs, Linux administration, networking, scripting, and security operations.
 
 ---
 
