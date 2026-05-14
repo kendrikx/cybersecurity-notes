@@ -1,84 +1,135 @@
-•Navigation Commands • pwd = show current directory • ls = list files and folders • cd = move between directories 
-•Getting Help • man ls = manual page for ls • ls --help = quick help menu
-•File and Directory Management • touch = create file • mkdir = create directory • cp = copy files and folders • mv = move or rename files • rm = remove files
-•Hidden Files • ls -a = show hidden files
-•Wildcards • * = match multiple files
-•SSH • SSH allows remote connection to Linux servers
-•File Information • file filename = determine file type
-•What I understood well • Navigation • File management • SSH basics
-•What was difficult • Merging files • Some navigation confusion at first
-•Progress • Completed 4 out of 8 topics 
+# Linux Fundamentals: Basic Commands & Navigation
 
-NEXT DAY
-Basic Commands
-rm – Remove a file or folder
-file – Determine the type of a file
-Flags (Options)
+## Navigation Commands
+
+- `pwd` — Show current working directory (Print Working Directory)
+- `ls` — List files and folders in the current directory
+- `cd` — Change directory (move between folders)
+
+### Common `cd` Usage
+- `cd <folder>` → Go into a folder
+- `cd ..` → Go up one level
+- `cd \~` → Go to home directory
+- `cd -` → Go back to previous directory
+
+---
+
+## Getting Help
+
+- `man <command>` — Open the full manual page for a command (e.g., `man ls`)
+- `<command> --help` — Quick help menu with options (e.g., `ls --help`)
+
+---
+
+## File and Directory Management
+
+- `touch <filename>` — Create an empty file
+- `mkdir <foldername>` — Create a new directory
+- `cp <source> <destination>` — Copy files or folders
+- `mv <source> <destination>` — Move or rename files/folders
+- `rm <filename>` — Remove (delete) a file
+- `rm -r <folder>` — Remove a folder recursively (use with caution)
+
+### Hidden Files
+- `ls -a` — Show hidden files (files starting with `.`)
+
+### Wildcards
+- `*` — Matches any number of characters (e.g., `*.txt` for all text files)
+
+---
+
+## File Information
+
+- `file <filename>` — Determine the type of a file
+
+---
+
+## Flags (Options)
+
 Flags change how a command behaves.
-Short flags: -l
-Long flags: --list
-File Permissions (ls -l output)
 
-1) Common Permission: -rw-r--r--
-Meaning: Everyone can read the file, but only the owner can edit it.
-Breakdown:
-- → Regular file
-rw- → Owner: Read + Write
-r-- → Group: Read only
-r-- → Others: Read only
+- **Short flags**: `-l` (e.g., `ls -l`)
+- **Long flags**: `--list` (e.g., `ls --list`)
 
-2) Strict Permission: -rw-------
-Meaning: Only the owner can read or write this file. Very secure/private.
-Breakdown:
-- → Regular file
-rw- → Owner: Read + Write
---- → Group: No access
---- → Others: No access
-Numeric value: 600
-Used for: SSH private keys, passwords, API keys, secret config files.
+---
 
-3) Directory Example: drwx------
-Meaning: Only the owner can access this folder.
-Breakdown:
-d → Directory
-rwx → Owner: Full access
---- → Group: No access
---- → Others: No access
+## File Permissions (`ls -l` output)
 
-Common Numeric Permissions:
-777 → Everyone can do everything
-755 → Owner full, others read & execute (common for folders)
-644 → Owner can edit, others read only (common for files)
-600 → Only owner can read & write
-700 → Only owner can access (for folders)
+### 1) Common Permission: `-rw-r--r--`
+**Meaning**: Everyone can read the file, but only the owner can edit it.
 
-Important Directories
-/ → Root (start of the filesystem)
-/home → User home directories
-/etc → Configuration files
-/var → Logs and variable data
-/tmp → Temporary files
+**Breakdown**:
+- `-` → Regular file
+- `rw-` → Owner: Read + Write
+- `r--` → Group: Read only
+- `r--` → Others: Read only
 
-Navigation
-cd <folder> → Go to folder
-cd .. → Go up one level
-cd \~ → Go to home directory
-cd - → Go back to previous directory
-pwd → Show current directory
+### 2) Strict Permission: `-rw-------` (Numeric: **600**)
+**Meaning**: Only the owner can read or write. Very secure.
 
-User & Privilege Commands
-su → Switch User
-Used to switch to another user account.
-su - or su -l → Switch user with login environment
-This is the proper way when you want to fully log in as the other user (loads their full environment, home directory, shell settings, etc.).
-Example: su - root or su -l username
-sudo → Superuser do (run a single command as root)
-sudo -i or sudo su → Get a full root login shell
+**Used for**: SSH private keys, passwords, API keys, secret config files.
 
-Why Permissions Matter
+### 3) Directory Example: `drwx------` (Numeric: **700**)
+**Meaning**: Only the owner can access this folder.
+
+**Common Numeric Permissions**:
+- `777` → Everyone can do everything (very permissive)
+- `755` → Owner full access, others read & execute (common for folders)
+- `644` → Owner can edit, others read only (common for files)
+- `600` → Only owner can read/write
+- `700` → Only owner can access directory
+
+---
+
+## Important System Directories
+
+- `/` → Root directory (start of the entire filesystem)
+- `/home` → User home directories
+- `/etc` → Configuration files
+- `/var` → Logs and variable data
+- `/tmp` → Temporary files
+
+---
+
+## SSH
+
+SSH allows secure remote connection to Linux servers.
+
+---
+
+## User & Privilege Commands
+
+- `su` — Switch User
+  - `su -` or `su -l` → Proper login as another user (loads full environment)
+- `sudo` — Superuser do (run a single command as root)
+  - `sudo -i` or `sudo su` → Get a full root shell
+
+---
+
+## Why Permissions Matter
+
 Linux is a multi-user system. Permissions help:
-Control who can read, modify, or execute files
-Prevent accidents and unauthorized access
-Keep the system secure
+- Control who can read, modify, or execute files
+- Prevent accidents and unauthorized access
+- Keep the system secure
 
+---
 
+## Reflection
+
+**What I understood well**:
+- Navigation commands
+- Basic file management (`touch`, `mkdir`, `cp`, `mv`, `rm`)
+- SSH basics
+- File permissions concepts
+
+**What was difficult**:
+- Merging files
+- Initial navigation confusion
+- Remembering permission numbers
+
+**Progress**: Completed basic navigation and file management topics.
+
+---
+
+**Next Topics to Cover**: Process management, package management, cron jobs, logs, and advanced permissions.
