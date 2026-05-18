@@ -7,7 +7,7 @@
 - **Vulnerability**: A weakness in a system that can be exploited by threats.
 - **Risk**: The likelihood and impact of a threat exploiting a vulnerability.
 
----
+--- 
 
 ## Security Approaches 
 
