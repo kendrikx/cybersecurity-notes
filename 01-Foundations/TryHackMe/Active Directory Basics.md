@@ -177,5 +177,178 @@ Main challenge areas:
 - password management commands
 - enterprise administration syntax
 
+# Active Directory Authentication & Group Policies
+
+---
+
+# Group Policies (GPOs)
+
+Group Policies are collections of settings applied to:
+- users
+- computers
+- organizational units (OUs)
+
+GPOs help administrators enforce:
+- security settings
+- system configurations
+- organizational policies
+
+Examples:
+- password policies
+- firewall rules
+- USB restrictions
+
+---
+
+# SYSVOL
+
+SYSVOL is a network share used to distribute:
+- Group Policies
+- login scripts
+- domain-wide configurations
+
+across the network.
+
+---
+
+# Authentication Methods
+
+Active Directory commonly uses two authentication protocols:
+- Kerberos
+- NetNTLM
+
+---
+
+# Kerberos Authentication
+
+Kerberos is the default authentication protocol in modern Windows domains.
+
+It uses a trusted third party called:
+- Key Distribution Center (KDC)
+
+Passwords are not repeatedly transmitted across the network.
+
+---
+
+# Kerberos Process
+
+## Step 1
+User logs in.
+
+The KDC verifies credentials and issues:
+- Ticket Granting Ticket (TGT)
+
+---
+
+## Step 2
+When accessing a service:
+- the client presents the TGT
+- requests a Service Ticket
+
+---
+
+## Step 3
+The Service Ticket is presented to the target server for access.
+
+---
+
+# Benefits of Kerberos
+
+- centralized authentication
+- improved security
+- reduced password exposure
+- scalable enterprise authentication
+
+---
+
+# NetNTLM Authentication
+
+NetNTLM is an older legacy authentication protocol.
+
+It uses:
+- challenge-response authentication
+
+instead of ticket-based authentication.
+
+NetNTLM is mainly kept for compatibility purposes.
+
+---
+
+# Active Directory Tree
+
+A Tree is a collection of domains sharing:
+- a continuous namespace
+- a parent-child relationship
+
+Example:
+- company.com
+- hr.company.com
+- it.company.com
+
+Domains inside a tree automatically trust each other.
+
+---
+
+# Active Directory Forest
+
+A Forest is the highest organizational boundary inside Active Directory.
+
+It consists of:
+- one or more separate domain trees
+
+Different trees inside a forest may have different names but share:
+- schema
+- global catalog
+- trust relationships
+
+---
+
+# Trusts
+
+Trusts are authentication bridges between:
+- domains
+- trees
+- forests
+
+They allow users in one domain to access resources in another.
+
+---
+
+# Types of Trusts
+
+## Transitive Trust
+Trust automatically extends across connected domains.
+
+---
+
+## Non-Transitive Trust
+Trust exists only between two specific domains.
+
+---
+
+## One-Way Trust
+One domain can access another, but not vice versa.
+
+---
+
+## Two-Way Trust
+Both domains can access each other.
+
+---
+
+# Reflection
+
+This module focused heavily on:
+- enterprise authentication
+- Kerberos
+- Active Directory infrastructure
+- trust relationships
+- Group Policies
+
+Most challenging areas:
+- Kerberos ticket flow
+- forests and trusts
+- enterprise authentication architecture
+
 Overall understanding:
-Approximately 70% to 80%.
+Approximately 50% to 60%.
