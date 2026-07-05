@@ -1,0 +1,638 @@
+# 🌐 Networking Foundations Master Summary
+
+> A complete networking foundation for cybersecurity, covering network communication, protocols, addressing, secure communications and defensive infrastructure.
+
+---
+
+# Why Networking Matters
+
+Networking is the backbone of cybersecurity.
+
+Every packet, login attempt, malware infection, phishing attack, firewall rule and intrusion travels through a network.
+
+Understanding networking allows a cybersecurity professional to:
+
+* Investigate incidents
+* Analyze malicious traffic
+* Secure enterprise infrastructure
+* Detect attacks
+* Build secure systems
+
+---
+
+# Learning Roadmap
+
+```text
+OSI Model
+     ↓
+TCP/IP Model
+     ↓
+Encapsulation
+     ↓
+IPv4 / IPv6
+     ↓
+Subnetting
+     ↓
+DHCP
+     ↓
+ARP
+     ↓
+ICMP
+     ↓
+Routing
+     ↓
+NAT
+     ↓
+TCP vs UDP
+     ↓
+DNS
+     ↓
+HTTP / HTTPS
+     ↓
+FTP / SFTP / FTPS
+     ↓
+SMTP / POP3 / IMAP
+     ↓
+TLS
+     ↓
+SSH
+     ↓
+VPN
+     ↓
+Firewalls
+     ↓
+Switches & Routers
+```
+
+---
+
+# OSI Model
+
+| Layer | Name | Purpose |
+|--------|------|----------|
+| 7 | Application | User services and applications |
+| 6 | Presentation | Encryption, Compression, Encoding |
+| 5 | Session | Session establishment and management |
+| 4 | Transport | Reliable communication using ports |
+| 3 | Network | Routing using IP addresses |
+| 2 | Data Link | Local communication using MAC addresses |
+| 1 | Physical | Electrical and optical transmission |
+
+Mnemonic
+
+> Please Do Not Throw Sausage Pizza Away
+
+---
+
+# TCP/IP Model
+
+| Layer | Protocol Examples |
+|---------|------------------|
+| Application | HTTP, HTTPS, DNS, SMTP |
+| Transport | TCP, UDP |
+| Internet | IPv4, IPv6, ICMP |
+| Link | Ethernet, WiFi |
+
+---
+
+# Encapsulation
+
+```text
+Application
+      │
+      ▼
+Data
+      │
+Transport
+      ▼
+Segment
+(TCP / UDP)
+      │
+Network
+      ▼
+Packet
+(IP)
+      │
+Data Link
+      ▼
+Frame
+(MAC)
+      │
+Physical
+      ▼
+Bits
+```
+
+Receiving devices perform **De-encapsulation**, reversing the process back into usable data.
+
+---
+
+# IPv4 vs IPv6
+
+| IPv4 | IPv6 |
+|------|-------|
+| 32 Bit | 128 Bit |
+| Decimal | Hexadecimal |
+| ≈4.3 Billion Addresses | Virtually Unlimited |
+
+Example
+
+```
+IPv4
+192.168.1.15
+
+IPv6
+2001:db8::15
+```
+
+---
+
+# Subnetting
+
+Subnetting divides a large network into smaller logical networks.
+
+Benefits
+
+* Better performance
+* Better security
+* Easier management
+* Reduced broadcast traffic
+
+Example
+
+```
+IP Address
+
+192.168.1.25
+
+Subnet Mask
+
+255.255.255.0
+
+Network
+
+192.168.1.0
+
+Host
+
+25
+```
+
+---
+
+# DHCP
+
+Dynamic Host Configuration Protocol automatically provides
+
+* IP Address
+* Subnet Mask
+* Default Gateway
+* DNS Server
+
+DORA Process
+
+```text
+Client
+   │
+Discover
+   ▼
+Server
+   │
+Offer
+   ▼
+Client
+   │
+Request
+   ▼
+Server
+   │
+Acknowledge
+```
+
+---
+
+# ARP
+
+Address Resolution Protocol converts
+
+```
+IP Address
+
+↓
+
+MAC Address
+```
+
+Example
+
+```text
+Need MAC for
+
+192.168.1.10
+
+↓
+
+Broadcast
+
+Who has 192.168.1.10?
+
+↓
+
+Reply
+
+MAC
+00:1A:2B:3C:4D:5E
+```
+
+Security Risk
+
+ARP Spoofing
+
+---
+
+# ICMP
+
+Internet Control Message Protocol
+
+Used for
+
+* Ping
+* Traceroute
+* Network troubleshooting
+
+Commands
+
+```
+ping
+
+traceroute
+```
+
+---
+
+# Routing
+
+Routers determine the best path between networks using routing tables.
+
+Default Gateway
+
+The router your device sends traffic to when leaving the local network.
+
+---
+
+# NAT
+
+Network Address Translation
+
+Allows many private devices to share one public IP.
+
+```text
+Laptop
+192.168.1.2
+
+Phone
+192.168.1.3
+
+TV
+192.168.1.4
+
+       │
+       ▼
+
+Router (NAT)
+
+Public IP
+
+154.xxx.xxx.xxx
+
+       │
+       ▼
+
+Internet
+```
+
+Benefits
+
+* Conserves IPv4 addresses
+* Hides internal network
+
+---
+
+# TCP vs UDP
+
+| TCP | UDP |
+|------|------|
+| Reliable | Fast |
+| Connection Oriented | Connectionless |
+| Ordered Delivery | No Ordering |
+| Error Recovery | No Recovery |
+| HTTPS | DNS |
+| SSH | Streaming |
+| FTP | Gaming |
+
+---
+
+# TCP Three Way Handshake
+
+```text
+Client
+
+SYN
+ │
+ ▼
+
+Server
+
+SYN ACK
+ │
+ ▼
+
+Client
+
+ACK
+
+Connection Established
+```
+
+---
+
+# DNS
+
+Domain Name System translates names into IP addresses.
+
+```
+google.com
+
+↓
+
+142.xxx.xxx.xxx
+```
+
+DNS Resolution
+
+```text
+Browser
+
+↓
+
+DNS Resolver
+
+↓
+
+Root Server
+
+↓
+
+TLD Server
+
+↓
+
+Authoritative Server
+
+↓
+
+IP Address
+```
+
+Common Records
+
+| Record | Purpose |
+|---------|----------|
+| A | IPv4 |
+| AAAA | IPv6 |
+| CNAME | Alias |
+| MX | Mail Server |
+
+Port
+
+53
+
+---
+
+# WHOIS
+
+Provides
+
+* Domain owner
+* Registration date
+* Expiry
+* Registrar
+* Nameservers
+
+Port
+
+43
+
+---
+
+# HTTP vs HTTPS
+
+| HTTP | HTTPS |
+|-------|--------|
+| Port 80 | Port 443 |
+| Plain Text | Encrypted |
+| No Authentication | TLS Authentication |
+
+---
+
+# TLS
+
+Transport Layer Security
+
+Provides
+
+* Confidentiality
+* Integrity
+* Authentication
+
+Handshake
+
+```text
+Client Hello
+
+↓
+
+Server Hello
+
+↓
+
+Certificate Validation
+
+↓
+
+Key Exchange
+
+↓
+
+Encrypted Communication
+```
+
+---
+
+# File Transfer
+
+| Protocol | Port | Secure |
+|-----------|------|---------|
+| FTP | 20 / 21 | ❌ |
+| FTPS | 989 / 990 | ✅ |
+| SFTP | 22 | ✅ |
+
+---
+
+# Email Protocols
+
+| Protocol | Purpose | Port |
+|-----------|----------|------|
+| SMTP | Send Mail | 25 / 587 |
+| SMTPS | Secure Send | 465 |
+| POP3 | Download Mail | 110 |
+| POP3S | Secure Download | 995 |
+| IMAP | Synchronize Mail | 143 |
+| IMAPS | Secure Sync | 993 |
+
+---
+
+# Remote Access
+
+| Protocol | Port | Security |
+|-----------|------|----------|
+| Telnet | 23 | Plain Text |
+| SSH | 22 | Encrypted |
+
+---
+
+# VPN
+
+Virtual Private Network
+
+Provides
+
+* Encryption
+* Secure Tunnel
+* IP Masking
+* Secure Remote Access
+
+```text
+Laptop
+
+↓
+
+Encrypted Tunnel
+
+↓
+
+VPN Server
+
+↓
+
+Internet
+```
+
+---
+
+# Firewalls
+
+```text
+Internet
+
+      │
+
+Firewall
+
+      │
+
+Allow?
+
+├── Yes → Internal Network
+
+└── No → Drop Packet
+```
+
+## Firewall Types
+
+| Firewall | Description |
+|------------|--------------|
+| Stateless | Inspects individual packets |
+| Stateful | Tracks connection states |
+| NGFW | DPI, IPS, Malware Detection, Application Awareness |
+
+---
+
+# Network Devices
+
+| Device | OSI Layer | Function |
+|----------|-----------|-----------|
+| Hub | Layer 1 | Broadcasts to every port |
+| Switch | Layer 2 | Uses MAC addresses |
+| Router | Layer 3 | Routes between networks |
+
+---
+
+# Diagnostic Commands
+
+| Command | Purpose |
+|-----------|----------|
+| ping | Test connectivity |
+| traceroute | Trace packet path |
+| whois | Domain reconnaissance |
+
+---
+
+# Port Cheat Sheet
+
+| Protocol | Port |
+|-----------|------|
+| FTP | 20, 21 |
+| SSH | 22 |
+| Telnet | 23 |
+| SMTP | 25, 587 |
+| DNS | 53 |
+| HTTP | 80 |
+| POP3 | 110 |
+| IMAP | 143 |
+| HTTPS | 443 |
+| SMTPS | 465 |
+| SFTP | 22 |
+| POP3S | 995 |
+| IMAPS | 993 |
+
+---
+
+# Key Cybersecurity Takeaways
+
+✅ Networking is the foundation of cybersecurity.
+
+✅ Every packet follows the OSI/TCP/IP models.
+
+✅ IP addresses identify devices across networks.
+
+✅ MAC addresses identify devices locally.
+
+✅ ARP connects Layer 3 to Layer 2.
+
+✅ DHCP automatically configures hosts.
+
+✅ DNS translates names into IP addresses.
+
+✅ TCP prioritizes reliability.
+
+✅ UDP prioritizes speed.
+
+✅ TLS protects modern internet communications.
+
+✅ SSH replaces insecure Telnet.
+
+✅ SFTP replaces FTP.
+
+✅ VPN encrypts traffic across public networks.
+
+✅ Stateful and Next Generation Firewalls provide stronger protection than Stateless Firewalls.
+
+✅ Knowing common ports is essential for SOC analysts, penetration testers and incident responders.
+
+---
+
+## Status
+
+✅ Networking Foundations Completed
+
